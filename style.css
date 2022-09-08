@@ -1,0 +1,544 @@
+* {
+    font-size: 16px;
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color : rgb(9, 157, 255);
+    --primary-color-hover : rgb(133, 206, 255);
+    --btn-bx-shadow : 0 5px 12px -5px #0006;
+    --btn-b-radius : 5px;
+    --input-bg-color : rgb(226, 226, 226);
+    --btn-bx-shadow-light : 0 5px 5px -3px rgba(0, 0, 0, 0.116);
+}
+.header {
+    background-color: var(--primary-color);
+}
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+header {
+    height: 120px;
+    color: white;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+body {
+    margin: 0 ;
+}
+
+.btn {
+    border: 1px solid;
+    padding: 7px 18px;
+    cursor: pointer;
+}
+
+.validation {
+    display: block;
+    padding-top: 24px ;
+    padding-bottom: 10px;
+}
+.validation .valide {
+    border: 1px solid transparent;
+    background-color: var(--primary-color) ;
+    color: white;
+    font-weight: 500;
+    border-radius: var(--btn-b-radius);
+    box-shadow: var(--btn-bx-shadow-light);
+    margin-right: 12px;
+    transition: all .3s ease-in-out;
+}
+
+.validation .valide:hover {
+    background-color: var(--primary-color-hover);
+    color: black;
+}
+
+.validation .annule {
+    border: none;
+}
+
+.new {
+    color: var(--primary-color);
+    font-weight: 600;
+    background-color: white ;
+    border-radius: var(--btn-b-radius);
+    box-shadow: var(--btn-bx-shadow) ;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.container-form {
+    padding: 36px;
+    border: 1px solid silver;
+    border-radius: 0 0 18px 18px;
+    background-color: white;
+    box-shadow: var(--btn-bx-shadow);
+}
+.container-form .titre {
+    margin-bottom: 24px;
+    color: #444;
+}
+.form {
+    display: flex;
+    
+}
+
+.topPosition {
+    position: absolute;
+    top: -500px;
+}
+
+input {
+    border:1px solid var(--input-bg-color);
+    border-radius: 3px;
+}
+
+#new_boursier {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form > .left, .form > .right {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+.form label, .form input, .form select {
+    display: block;
+    width: 70%;
+    outline: none;
+}
+.form label {
+    padding: 7px 0;
+    font-weight: 500;
+}
+
+.form input, .form select {
+    padding: 5px 12px;
+}
+
+.form .champ {
+    width: 100%;
+}
+
+.form select {
+    border: 1px solid var(--input-bg-color);
+    border-radius: 3px;
+}
+
+.form .semichamp {
+    width: 35%;
+    display: inline-block;
+}
+.form .semichamp input {
+   border: none;
+}
+.form .semichamp.radio {
+    display: inline-flex;
+    align-items: center;
+}
+.form .semichamp.radio input, .form .semichamp.radio label {
+   display: inline-block;
+}
+
+.form .semichamp.radio input {
+    height: 20px;
+}
+
+.form .semichamp .input, .form .semichamp label {
+    width: 100%;
+}
+
+.form .semichamp .input {
+    display: flex;
+    border: 1px solid var(--input-bg-color);
+    border-radius: 3px;
+    overflow: hidden;
+
+}
+.form .semichamp .input > div {
+    display: flex;
+    width: 30%;
+    padding: 7px;
+    background-color: aliceblue;
+    justify-content: center;
+}
+
+#section_2 {
+    min-height : calc(100vh - 120px)
+}
+#section_3{
+    position : fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+}
+.mask {
+    display: block;
+    height: 100%;
+    backdrop-filter: blur(0);
+    transition: all .3s ease-in-out;
+}
+
+.mask .header {
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.mask .header > .back {
+    height: 55px;
+    width : 55px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
+}
+
+.mask .header > .back:hover {
+    background-color: #fff4;
+    border: 3px solid white;
+}
+
+.mask .header > .back > div {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mask .header > .header_titre {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 600;
+    color: white;
+    margin-left: 12px;
+}
+.info_Etudiant{
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 -5px 30px -5px rgba(0, 0, 0, 0.4);
+}
+
+.info_Etudiant .grid {
+    grid-template-columns: 60% 40%;
+    padding-top: 36px ;
+}
+
+.info_Etudiant .action > div {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+}
+
+.info_Etudiant .action > div > div {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+#left, #right {
+    width : 100%
+}
+
+.headerTable {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 12px;
+    padding: 0 12px;
+}
+
+.sexe,.matricule {
+    display: inline-flex;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.name, .parcours {
+    display: inline-flex;
+    height: 60%;
+    align-items: center;
+    width: 30%;
+}
+
+.parcours {
+    justify-content: center;
+}
+
+.item {
+    background-color:rgba(224, 245, 255, 0.432);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item >item-js>  div:first-child{
+    display: flex;
+    align-items: center;
+    height: 62px;
+    padding: 0 12px;
+}
+.item >item-js> .action{
+    display: flex;
+    align-items: center;
+    height: 0;
+    background-color: rgb(23, 127, 196);
+    padding: 0 12px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.item + .item {
+    margin-top: 10px;
+}
+
+.el + .el {
+    border-left: 1px solid silver ;
+}
+.icon {
+    cursor: pointer;
+}
+.icon + .icon {
+margin-left: 10px;
+
+}
+
+.etudiant_haut {
+    margin-bottom: 24px;
+}
+
+.etudiant_haut .name {
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: -20px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.etudiant_haut .surname {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: -5px;
+
+}
+.etudiant_haut .age {
+    font-size: large;
+    font-weight: 600;
+}
+
+.etudiant_bas {
+    display: block;
+    width: 100%;
+}
+
+.etudiant_bas .champ {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    width: 90%;
+}
+
+.etudiant_bas .champ + .champ {
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.etudiant_bas .champ > span:first-child{
+    display: inline-block;
+    width: 40%;
+}
+.etudiant_bas .champ > span:last-child{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.note {
+    width: 100%;
+    height: 500px;
+    background-color: #f9ecd6;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.note .note_header {
+    width: 100%;
+    height : 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.note .note_header > div:first-child {
+   font-weight: 700;
+   color : #4f3200
+}
+
+.note .note_vide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 56px);
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.note .note_vide button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: #4f3200;
+    color: white;
+    margin-top: 12px;
+    box-shadow: var(--btn-bx-shadow);
+    cursor: pointer;
+}
+
+#newNote{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#newNote .mask, #newNote .noteInput{
+    position: relative;
+}
+
+#newNote .mask {
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    backdrop-filter: blur(0);
+}
+
+#newNote .noteInput {
+    width: 100%;
+    height: 20%;
+    background-color: #4f3200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+#newNote .noteInput > .champ {
+    width: 60%;
+}
+#newNote .noteInput > .champ > input {
+    width: 100%;
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    background-color: rgba(240, 240, 240, 0.582);
+    color: white;
+}
+
+#newNote .noteInput > .champ > input::placeholder {
+    color : rgba(94, 94, 94, 0.699)
+}
+
+#newNote .noteInput  button {
+    padding: 10px 12px;
+    font-size: 13px;
+    background-color: #2b2316;
+    color : white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+}
+#newNote .noteInput > .champ.moyen {
+    width: 15%;
+}
+.note_item {
+    padding: 0 16px;
+    display:flex;
+    width: 432px;
+    height: 30px;
+    overflow: hidden;
+
+    transition: all .3s ease-in-out;
+}
+
+.note_item .matiere {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 30px;
+}
+
+.note_item .progressBar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 30px;
+}
+.note_item .bar-border {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 12px;
+}
+.note_item .bar-border .bar-progress {
+    height: 100%;
+    border-radius: 12px;
+    background-color: #4f3200;
+
+}
+.note_item .moyenne {
+    height: 30px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: 600;
+}
+.note_item .action {
+    height: 30px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.note_item .action > div {
+    margin: 0;
+    border-radius: 12px;
+    height: 30px;
+}

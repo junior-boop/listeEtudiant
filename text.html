@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Etudiant (nom, prenom,sexe,DDN, LDN,matricule,parcours,poids, taille){
+            this.nom = nom;
+            this.prénom = prénom;
+            this.sexe = sexe;
+            this.DDN = DDN;
+            this.LDN = LDN;
+            this.matricule = matricule;
+            this.parcours = parcours;
+            this.poids= poids;
+            this.taille= taille;
+            }
+                                               
+        Etudiant.prototype.gen_ID = () => {
+            const A ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_'
+            let id = ''
+            for (let i = 0; i < 6; i++) {   
+                const random = Math.floor((Math.random() * 100) * 0.63)
+                id += A[random]
+            }
+
+                return id
+        }
+
+        etu.prototype.subscribe = function () {
+            const { nom, prenom,sexe,DDN, LDN,matricule,parcours,poids, taille} = this;
+            let bd =[];
+            let l= localStorage;
+            
+            const etu = {
+                nom: nom, prenom: prenom, sexe: sexe, LDN: LDN, DDN: DDN, matricule: matricule, parcours: parcours, poids: poids, taille: taille
+            }
+
+            bd.push(etu)
+            console.log(bd)
+            if (local.getItem(`etu`) ===) {
+                console.log(`Null`,`creation de la base de données`);
+                local. setItem(`etu`, JSON.stringify(bd));
+            } else {
+                let save = JSON.parse(local.getItem(`etu`));
+                save.push(etu)
+                local.setItem(`etu`, JSON.stringify(save));
+            }
+         
+         }
+
+         Etudiant.prototype.delete = function (id) { 
+             const l = localStorage; 
+             const bd = JSON.parse(l.getItem(`etu`));
+             bd.forEach((el, key) => {
+                 if (id === el.id) {
+                     bd.splice(key, 1)
+                     l.setItem(`etu`, JSON.stringify(bd))
+                 
+                }
+            });
+        } 
+        Etudiant.prototype.update = function (matricule, nom, prenom, sexe, DDN, LDN, parcours, poids, taille) {
+            const l = localStorage;
+            const bd = JSON.parse(l.getItem(`etu`));
+            bd.forEach((el, key)) => {
+                const etu = {
+                    nom: nom, prenom: prenom, sexe: sexe, parcours: parcours, matricule: matricule, poids: poids
+                }
+                if (matricule === el.matricule) {
+
+                }
+
+            } 
+        });
+}
+        
+    </script>
+</body>
+</html>         

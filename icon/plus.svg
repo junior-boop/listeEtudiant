@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="plus" transform="translate(1.5 1.5)">
+    <path d="M0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11C22 17.0751 17.0751 22 11 22C4.92487 22 0 17.0751 0 11Z" id="Ellipse" fill="none" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="3" />
+    <g id="+" fill="#FFFFFF" transform="translate(3 2)">
+      <path d="M6.56818 13.9574L6.56818 10.6591L3.26989 10.6591L3.26989 7.79545L6.56818 7.79545L6.56818 4.49716L9.43182 4.49716L9.43182 7.79545L12.7301 7.79545L12.7301 10.6591L9.43182 10.6591L9.43182 13.9574L6.56818 13.9574Z" />
+    </g>
+  </g>
+</svg>
